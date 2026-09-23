@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    width: 98%;
+}
+
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 4%;
+    background-color: rgb(89, 78, 102);
+    border-radius: 10px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+body{
+    background-color: rgb(115, 105, 129);
+}
+
+header button{
+    
+    background-color: rgb(138, 126, 155);
+    border-color: rgb(123, 111, 141);
+    border-radius: 6px;
+    padding: 5%;
+    width: auto;
+
+    flex: 1 1 auto;
+    min-width: fit-content;
+
+    font-size: 5vh;
+    font-weight: 600;
+}
+header button:hover{
+    background-color: rgb(102, 87, 123);
+    border-color: rgb(95, 78, 118);
+    border-radius: 6px;
+}
+
+.bloc-1{
+    width: 60%;
+    border-radius: 5px;
+    background-color: rgb(89, 78, 102);
+    padding: 1%;
+}
+
+main{
+    font-size: 3vh;
+}
+
+.ligne{
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+    flex: 1 1 auto;
+}
+
+.image{
+    width: 40%;
+}
+.image img{
+    object-fit: contain;
+    height:auto;
+    max-width: 100%;
+}

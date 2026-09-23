@@ -40,6 +40,7 @@ header button{
     border-color: rgb(123, 111, 141);
     border-radius: 6px;
     padding: 5%;
+    margin-top: -2px;
     width: auto;
 
     flex: 1 1 auto;

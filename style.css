@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-    --fond-clair: #8991a6;
+    --fond-clair: #3a3e48;
     --fond-sombre: #363943;
     --fond : #111217;
 }
@@ -44,3 +44,46 @@ body{
     background-color: var(--fond-sombre);
 }
 
+.section-1{
+    background-color: var(--fond-clair);
+}
+.container-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+    gap: 24px;
+}
+.container-1 .img{
+    width: 50%;
+}
+.container-1 .img img{
+    max-width: 100%;
+    display: block;
+}
+.text{
+    width: 50%;
+    color: rgb(226, 226, 226);
+    line-height: 26px;
+}
+
+.ection{
+    background-color: var(--fond-sombre);
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+    gap: 24px;
+}
+.container h1{
+    text-align: center;
+}
+.container .text{
+    width: 70s;
+}

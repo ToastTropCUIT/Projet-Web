@@ -87,3 +87,9 @@ body{
 .container .text{
     width: 70s;
 }
+
+h1{
+    color: rgb(226, 226, 226) ;
+    text-align: center;
+    margin: 50px 0;
+}

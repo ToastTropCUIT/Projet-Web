@@ -11,6 +11,7 @@
   --ring-fill: #ffffff;
   --text: #ffffff;
   --label: rgba(255, 255, 255, 0.75);
+  --width: 70%
 }
 
 body {
@@ -103,6 +104,11 @@ h1 {
 }
 .container-h {
   width: 70%;
+  margin-right: 70px;
+}
+.container img {
+  width: 64px;
+
 }
 .container-h .text {
   width: 100%;
@@ -187,14 +193,14 @@ affichage/désafichage lors du passage sur l'icone
 
 .titan-kit {
   display: grid;
-  grid-template-columns: repeat(2, 128px) auto;
-  grid-template-rows: repeat(3, 128px);
+  grid-template-columns: repeat(2, 64px) auto;
+  grid-template-rows: repeat(3, 64px);
   gap: 8px 40px;
 }
 
 .icon-slot img {
-  width:  128px;
-  height: 128px;
+  width:  64px;
+  height: 64px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -212,7 +218,7 @@ affichage/désafichage lors du passage sur l'icone
   grid-column: 3;
   grid-row: 1 / span 3;
   position: relative;
-  min-width: 480px;
+  min-width: 240px;
 }
 
 .info-text {
@@ -222,7 +228,7 @@ affichage/désafichage lors du passage sur l'icone
   left: 0;
   margin: 0;
   color: white;
-  font-size: larger;
+  font-size: 1vw;
 }
 
 /* show matching text when hovering matching icon */
@@ -232,5 +238,60 @@ affichage/désafichage lors du passage sur l'icone
 #icon-4:hover ~ .info-box #text-4,
 #icon-5:hover ~ .info-box #text-5,
 #icon-6:hover ~ .info-box #text-6 {
+  display: block;
+}
+
+p{
+  color: white;
+}
+.container-h h1{
+  margin-top: 50px
+}
+
+.core-kit {
+  display: grid;
+  grid-template-columns: repeat(2, 64px) auto;
+  grid-template-rows: repeat(2, 64px);
+  gap: 8px 40px;
+}
+
+/* place the 3 icons into the 2x2 grid, left side
+   (works for core-icon-1/2/3, core2-icon-1/2/3, core3-icon-1/2/3...) */
+[id$="icon-1"] { grid-column: 1; grid-row: 1; }
+[id$="icon-2"] { grid-column: 2; grid-row: 1; }
+[id$="icon-3"] { grid-column: 1; grid-row: 2; }
+
+/* info box spans the full height, to the right */
+.core-kit .info-box {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  position: relative;
+  min-width: 240px;
+}
+
+.core-kit .info-text {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  color: white;
+  font-size: 1vw;
+}
+
+/* show matching text when hovering matching icon — Optimisation de noyau 1 */
+#core-icon-1:hover ~ .info-box #core-text-1,
+#core-icon-2:hover ~ .info-box #core-text-2,
+#core-icon-3:hover ~ .info-box #core-text-3,
+
+/* Optimisation de noyau 2 */
+#core2-icon-1:hover ~ .info-box #core2-text-1,
+#core2-icon-2:hover ~ .info-box #core2-text-2,
+#core2-icon-3:hover ~ .info-box #core2-text-3,
+
+/* Optimisation de noyau 3 */
+#core3-icon-1:hover ~ .info-box #core3-text-1,
+#core3-icon-2:hover ~ .info-box #core3-text-2,
+#core3-icon-3:hover ~ .info-box #core3-text-3 {
   display: block;
 }

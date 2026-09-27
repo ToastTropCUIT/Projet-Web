@@ -1,8 +1,11 @@
+/* Reset global et normalisation des éléments de base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Palette et variables du thème de l'application */
 :root {
   --fond-clair: #3a3e48;
   --fond-sombre: #363943;
@@ -11,23 +14,29 @@
   --ring-fill: #ffffff;
   --text: #ffffff;
   --label: rgba(255, 255, 255, 0.75);
-  --width: 70%
+  --width: 70%;
 }
 
+/* Styles généraux du corps de la page */
 body {
   font-family: "roboto", "arial";
   width: 100%;
+  background-color: var(--fond-sombre);
 }
+
+/* En-tête et navigation principale */
 header {
   display: flex;
   background-color: var(--fond);
   justify-content: space-between;
   height: 72px;
 }
+
 header img {
   margin: 5% 0 0 5%;
   height: 90%;
 }
+
 header button {
   width: 120px;
   height: 80%;
@@ -36,10 +45,12 @@ header button {
   box-shadow: #23252c;
   border-radius: 5px;
 }
+
 header button:hover {
   background-color: var(--fond-clair);
   box-shadow: var(--fond-sombre);
 }
+
 .liens {
   display: flex;
   justify-content: space-between;
@@ -47,18 +58,17 @@ header button:hover {
   margin: auto 0;
   font-size: larger;
 }
+
 .liens a {
   text-decoration: none;
   color: rgb(231, 231, 231);
 }
 
-body {
-  background-color: var(--fond-sombre);
-}
-
+/* Section d'introduction et blocs de contenu */
 .section-1 {
   background-color: var(--fond-clair);
 }
+
 .container-1 {
   display: flex;
   justify-content: space-between;
@@ -68,13 +78,16 @@ body {
   margin: 0 auto;
   gap: 24px;
 }
+
 .container-1 .img {
   width: 50%;
 }
+
 .container-1 .img img {
   max-width: 100%;
   display: block;
 }
+
 .text {
   width: 50%;
   color: rgb(226, 226, 226);
@@ -90,9 +103,11 @@ body {
   margin: 0 auto;
   gap: 24px;
 }
+
 .container h1 {
   text-align: center;
 }
+
 .container .text {
   width: 100%;
 }
@@ -102,19 +117,21 @@ h1 {
   text-align: center;
   margin: 50px 0;
 }
+
 .container-h {
   width: 70%;
   margin-right: 70px;
 }
+
 .container img {
   width: 64px;
-
 }
+
 .container-h .text {
   width: 100%;
 }
 
-/* gestiion de l'affichage de l'ensemble des stats de l'arm */
+/* Gestion de l'affichage de l'ensemble des statistiques de l'arme */
 .stats-bar {
   display: flex;
   justify-content: space-between;
@@ -129,8 +146,10 @@ h1 {
   align-items: center;
   gap: 0.6rem;
 }
+
+/* Anneau circulaire utilisé pour représenter un pourcentage */
 .ring {
-  --pct: 50; 
+  --pct: 50;
   --size: 84px;
   --thickness: 6px;
   width: var(--size);
@@ -141,7 +160,7 @@ h1 {
     var(--ring-track) 0
   );
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--thickness) - 2px), #000 calc(100% - var(--thickness)));
-          mask: radial-gradient(farthest-side, transparent calc(100% - var(--thickness) - 2px), #000 calc(100% - var(--thickness)));
+  mask: radial-gradient(farthest-side, transparent calc(100% - var(--thickness) - 2px), #000 calc(100% - var(--thickness)));
 }
 
 .ring-wrap {
@@ -169,7 +188,6 @@ h1 {
   text-transform: uppercase;
 }
 
-
 .stat.plain .ring-value-standalone {
   font-size: 2rem;
   font-weight: 300;
@@ -179,18 +197,16 @@ h1 {
   display: flex;
   align-items: center;
 }
-.section-1 h1{
-    margin: 0;
-}
-.section h1{
-    margin: 0;
+
+.section-1 h1 {
+  margin: 0;
 }
 
+.section h1 {
+  margin: 0;
+}
 
-/*
-affichage/désafichage lors du passage sur l'icone
-*/
-
+/* Affichage et masquage des descriptions au survol des icônes */
 .titan-kit {
   display: grid;
   grid-template-columns: repeat(2, 64px) auto;
@@ -199,13 +215,13 @@ affichage/désafichage lors du passage sur l'icone
 }
 
 .icon-slot img {
-  width:  64px;
+  width: 64px;
   height: 64px;
   border-radius: 4px;
   cursor: pointer;
 }
 
-/* place the 6 icons into the 2x3 grid, left side */
+/* Placement des 6 icônes dans la grille de gauche */
 #icon-1 { grid-column: 1; grid-row: 1; }
 #icon-2 { grid-column: 2; grid-row: 1; }
 #icon-3 { grid-column: 1; grid-row: 2; }
@@ -213,7 +229,7 @@ affichage/désafichage lors du passage sur l'icone
 #icon-5 { grid-column: 1; grid-row: 3; }
 #icon-6 { grid-column: 2; grid-row: 3; }
 
-/* info box spans the full height, to the right */
+/* Boîte d'informations située à droite de la grille */
 .info-box {
   grid-column: 3;
   grid-row: 1 / span 3;
@@ -231,7 +247,7 @@ affichage/désafichage lors du passage sur l'icone
   font-size: 1vw;
 }
 
-/* show matching text when hovering matching icon */
+/* Affiche le texte correspondant au survol de l'icône correspondante */
 #icon-1:hover ~ .info-box #text-1,
 #icon-2:hover ~ .info-box #text-2,
 #icon-3:hover ~ .info-box #text-3,
@@ -241,13 +257,15 @@ affichage/désafichage lors du passage sur l'icone
   display: block;
 }
 
-p{
+p {
   color: white;
 }
-.container-h h1{
-  margin-top: 50px
+
+.container-h h1 {
+  margin-top: 50px;
 }
 
+/* Grille des optimisations de noyau */
 .core-kit {
   display: grid;
   grid-template-columns: repeat(2, 64px) auto;
@@ -255,13 +273,12 @@ p{
   gap: 8px 40px;
 }
 
-/* place the 3 icons into the 2x2 grid, left side
-   (works for core-icon-1/2/3, core2-icon-1/2/3, core3-icon-1/2/3...) */
+/* Placement des 3 icônes dans la grille de gauche pour les optimisations de noyau */
 [id$="icon-1"] { grid-column: 1; grid-row: 1; }
 [id$="icon-2"] { grid-column: 2; grid-row: 1; }
 [id$="icon-3"] { grid-column: 1; grid-row: 2; }
 
-/* info box spans the full height, to the right */
+/* Boîte d'information située à droite de la grille */
 .core-kit .info-box {
   grid-column: 3;
   grid-row: 1 / span 2;
@@ -279,17 +296,13 @@ p{
   font-size: 1vw;
 }
 
-/* show matching text when hovering matching icon — Optimisation de noyau 1 */
+/* Affiche le texte correspondant au survol des icônes des optimisations de noyau */
 #core-icon-1:hover ~ .info-box #core-text-1,
 #core-icon-2:hover ~ .info-box #core-text-2,
 #core-icon-3:hover ~ .info-box #core-text-3,
-
-/* Optimisation de noyau 2 */
 #core2-icon-1:hover ~ .info-box #core2-text-1,
 #core2-icon-2:hover ~ .info-box #core2-text-2,
 #core2-icon-3:hover ~ .info-box #core2-text-3,
-
-/* Optimisation de noyau 3 */
 #core3-icon-1:hover ~ .info-box #core3-text-1,
 #core3-icon-2:hover ~ .info-box #core3-text-2,
 #core3-icon-3:hover ~ .info-box #core3-text-3 {
